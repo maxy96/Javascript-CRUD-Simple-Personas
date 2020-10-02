@@ -45,18 +45,11 @@ h3{
     background-color: #fb2c54;
 }
 
-.container{
-    width: 95%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
 .btn{
     cursor: pointer;
     border-radius: 10px;
     height: 3em;
+    margin: 2px 0px;
     width: 6em;
     text-transform: uppercase;
     border:0;
@@ -80,16 +73,36 @@ thead tr th{
     flex-wrap: wrap;
 }
 
-.col-4{
-    width: 23%;
+.container{
+    max-width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
-.col-8{
-    width: 70%;
+@media(min-width: 300px){
+    .col-4, .col-8{
+        width: 100%;
+    }
+    .container{
+        font-size: 14px;
+    }
 }
 
-.col-4, .col-8{
-    margin: 20px;
+@media(min-width: 860px){
+    .col-4{
+        width: 23%;
+    }
+    
+    .col-8{
+        width: 70%;
+    }
+
+    .col-4, .col-8{
+        margin: 20px;
+    }
+    
 }
 
 table{
@@ -105,6 +118,10 @@ tr td, tr th{
 tbody tr:nth-child(even){background-color: #f2f2f2;}
 
 tbody tr:hover {background-color: #ddd;}
+
+.table-responsive{
+    overflow-x: auto;
+}
 
 /*Estilos en los formularios */
 
