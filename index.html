@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>My web</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center">CRUD con datos de personas</h1>
+        <div class="row">
+            <div class="col-4">
+                <h3 class="text-center">Agregar nueva persona</h3>
+                <form>
+                    <div class="input-group">
+                        <div>
+                            <label for="nombre">Nombre </label>
+                        </div>
+                        <div>
+                            <input type="text" name="nombre" id="nombre">
+                        </div>
+                        <small id="errorNombre" style="display: none; color: red;" required>Debe ingresar datos alfabeticos</small>
+                    </div>
+                    <div class="input-group">
+                        <div>
+                            <label for="apellido">Apellido</label>
+                        </div>
+                        <div>
+                            <input type="text" name="apellido" id="apellido" required><br>
+                        </div>
+                        <small id="errorApellido" style="display: none; color: red;">Debe ingresar datos alfabeticos</small>
+                    </div>
+                    <button id="guardar" class="btn btn-primary" type="submit">Guardar</button>
+                    <button id="editar" class="btn btn-primary" type="submit" style="display: none;">Editar</button>
+                    <button id="cancelar" class="btn btn-secondary" style="display: none;">Cancelar</button> <br>
+                    <small id="camposIncompletos" style="display: none; color: red;">Todos los campos deben estar completos</small>
+                </form>
+            </div>
+
+            <div class="col-8">
+                <h3 class="text-center">Listado de personas</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>NOMBRE</th>
+                            <th>APELLIDO</th>
+                            <th style="width:25%;">ACCION</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <!--El contenido de aqui se cargara directamente desde el archivo JS.-->
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
